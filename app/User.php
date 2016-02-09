@@ -23,4 +23,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+        //Get the bookmarks of the user
+    public function bookmarks()
+    {
+        return $this->belongsTo('App\bookmark');
+    }
+
 }
